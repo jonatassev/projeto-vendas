@@ -1,5 +1,6 @@
 package br.com.jonatas.domain;
 
-public class Console {
-
+public class Console extends Produto{
+    
+   
 }

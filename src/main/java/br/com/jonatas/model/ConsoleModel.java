@@ -1,5 +1,11 @@
 package br.com.jonatas.model;
 
-public class ConsoleModel {
+import br.com.jonatas.domain.Produto;
+
+public class ConsoleModel extends ProdutoModel{
+
+    public ConsoleModel(Produto domain) {
+        super(domain);
+    }
 
 }
