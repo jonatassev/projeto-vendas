@@ -28,6 +28,13 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 	
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>compile</scope>
+		</dependency>
+			
 		<!-- JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
