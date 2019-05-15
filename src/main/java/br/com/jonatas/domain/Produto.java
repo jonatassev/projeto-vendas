@@ -1,5 +1,7 @@
 package br.com.jonatas.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import br.com.jonatas.model.ProdutoModel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -31,27 +32,18 @@ public class Produto {
     @Column(name="qtd", length = 128)
     private Integer qtd;
     
-    public Produto(ProdutoModel model) {
+    public Produto(Produto model) {
         this();
         this.nome = model.getNome();
         this.preco = model.getPreco();
         this.qtd = model.getQtd();
     }
-
-    public void addEstoque(Integer qtd) {
-        this.qtd += qtd;
+    public Produto(List<Produto> lista) {
+    	this();
     }
     
-    public void removerEstoque(Integer qtd) {
-        
-        if (this.qtd >= qtd) {
-            this.qtd -= qtd;
-        } else {
-            throw new RuntimeException("Erro ao remover qtd do estoque");
-        }
-    }
 
-    public void alterar(ProdutoModel model) {
+    public void alterar(Produto model) {
         
         this.nome = model.getNome();
         this.preco = model.getPreco();

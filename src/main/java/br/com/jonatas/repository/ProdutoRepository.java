@@ -1,5 +1,9 @@
 package br.com.jonatas.repository;
 
-public class ProdutoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.jonatas.domain.Produto;
+
+public interface ProdutoRepository extends JpaRepository<Produto, Long>{
 
 }

@@ -1,8 +1,12 @@
 package br.com.jonatas.model;
 
+import java.util.List;
+
 import br.com.jonatas.domain.Produto;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 public class ProdutoModel {
     
@@ -17,4 +21,7 @@ public class ProdutoModel {
         this.preco = domain.getPreco();
         this.qtd = domain.getQtd();
     }
+
+	public ProdutoModel(List<Produto> mostrarTudo) {
+	}
 }
